@@ -1,5 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView } from 'react-native';
+import { SafeAreaView, StatusBar } from 'react-native';
 import { ThemeProvider } from 'styled-components/native';
 import {
   useFonts,
@@ -20,11 +19,15 @@ export default function App() {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <SafeAreaView style={{ flex: 1 }}>
+      <>
         {fontsLoaded ? <Groups /> : <Loading />}
 
-        <StatusBar style='dark' />
-      </SafeAreaView>
+        <StatusBar
+          barStyle='light-content'
+          backgroundColor='transparent'
+          translucent
+        />
+      </>
     </ThemeProvider>
   );
 }
