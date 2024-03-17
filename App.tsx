@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, ActivityIndicator } from 'react-native';
+import { SafeAreaView } from 'react-native';
 import { ThemeProvider } from 'styled-components/native';
 import {
   useFonts,
@@ -10,6 +10,7 @@ import {
 import { defaultTheme } from 'src/styles/themes/default';
 
 import { Groups } from '@screens/Groups';
+import { Loading } from '@components/Loading';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -20,7 +21,7 @@ export default function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <SafeAreaView style={{ flex: 1 }}>
-        {fontsLoaded ? <Groups /> : <ActivityIndicator />}
+        {fontsLoaded ? <Groups /> : <Loading />}
 
         <StatusBar style='dark' />
       </SafeAreaView>
