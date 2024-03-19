@@ -17,6 +17,8 @@ export function NewGroup() {
           subtitle='crie a turma para adicionar as pessoas'
         />
 
+        <Input placeholder='Nome da turma' />
+
         <Button title='Criar' style={{ marginTop: 20 }} />
       </S.Content>
     </S.Container>
