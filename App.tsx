@@ -8,8 +8,9 @@ import {
 
 import { defaultTheme } from 'src/styles/themes/default';
 
-import { Groups } from '@screens/Groups';
 import { Loading } from '@components/Loading';
+
+import { Routes } from './src/routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -20,7 +21,7 @@ export default function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <>
-        {fontsLoaded ? <Groups /> : <Loading />}
+        {fontsLoaded ? <Routes /> : <Loading />}
 
         <StatusBar
           barStyle='light-content'
